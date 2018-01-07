@@ -1,0 +1,17 @@
+<div class="cuadro text-center"> 
+  <div class="texto">
+      <h1 class="h1">{{tareaInfo.texto}}</h1>
+      <small class="small">{{tareaInfo.valor}}</small>
+  </div>
+  <h2 class="h"> {{tareaInfo.valor}} </h2>
+  <div id="{{tareaInfo._id}}" class="contenido">
+    <input class="form-control" [(ngModel)]="texto">
+    <button class="btn btn-default" (click)="editar(tareaInfo._id)">Editar</button>
+  </div>
+  <div class="opciones">
+    <h4 class="glyphicon glyphicon-trash" (click)="Eliminar(tareaInfo._id)" title="eliminar"> </h4>
+    <h4 class="glyphicon glyphicon-heart positivo" (click)="valorar(tareaInfo._id, tareaInfo.valor, 'positivo')" title="like"> </h4>
+    <h4 class="glyphicon glyphicon-heart negativo" (click)="valorar(tareaInfo._id, tareaInfo.valor, 'negativo')" title="dislike"> </h4>
+    <h4 class="glyphicon glyphicon-pencil" (click)="visible(tareaInfo._id)" title="editar"> </h4>
+  </div>
+</div>

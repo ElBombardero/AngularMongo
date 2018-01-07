@@ -1,0 +1,14 @@
+<div class="contenedor">
+  <div class="list-group col-md-7">
+    <div class="list-group-item"> 
+      <div class=""> 
+        <h4 class="list-group-item-heading">Tarea</h4>
+      </div>
+        <input class="form-control input-texto" type="text" [(ngModel)]="texto">
+        <button class="btn btn-default"  (click)='crearTarea()' >Guardar</button>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-4 col xs-6" *ngFor="let tarea of tareas"> 
+    <app-tarea-individual [tareaInfo]="tarea" (actualizar)='actualizar()'> </app-tarea-individual>
+  </div>
+</div>

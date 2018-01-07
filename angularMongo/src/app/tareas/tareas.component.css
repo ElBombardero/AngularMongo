@@ -1,0 +1,25 @@
+.col-md-7 {
+    margin-left: 1%;
+    width:95%;
+}
+
+.input-texto {
+    width: 80%;
+    display: unset;
+}
+@media screen and (max-width:800px ) {
+    .col-md-7 {
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:500px ) {
+    
+    .btn-default {
+        width: 35%;
+        display: unset;
+    }
+    .input-texto {
+        width: 63%;
+    }
+}
