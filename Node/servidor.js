@@ -7,7 +7,8 @@ var cors = require('cors')
 
 
 
-mongoose.connect('mongodb://localhost:27017/lista-angular');
+mongoose.connect('mongodb://MongoMontero:Alistair1@ds245337.mlab.com:45337/lista-angular');
+//mongoose.connect('mongodb://localhost:27017/lista-angular');
 
 var Lista = mongoose.model('Lista', {
     texto:String,

@@ -22,7 +22,7 @@ export class TareaIndividualComponent implements OnInit {
   }
 
   Eliminar(parametro) {
-    this.http.delete('http://localhost:9090/api/lista/' + parametro)
+    this.http.delete('http://nodejs.njs.jelastic.vps-host.net/api/lista/' + parametro)
     .subscribe( (respuesta: Response) => {
       this.actualizar.emit();
     });
@@ -30,7 +30,7 @@ export class TareaIndividualComponent implements OnInit {
 
   editar(id) {
     const items = {texto: this.texto};
-    this.http.put('http://localhost:9090/api/lista/' + id, items)
+    this.http.put('http://nodejs.njs.jelastic.vps-host.net/api/lista/' + id, items)
     .subscribe( (respuesta: Response) => {
       this.actualizar.emit();
       console.log('editado');
@@ -58,7 +58,7 @@ export class TareaIndividualComponent implements OnInit {
         console.log('no paso na');
     }
     const items = {valor: this.nuevaCantidad };
-    this.http.put('http://localhost:9090/api/lista/' + id, items)
+    this.http.put('http://nodejs.njs.jelastic.vps-host.net/api/lista/' + id, items)
     .subscribe( (respuesta: Response) => {
       this.actualizar.emit();
     });
